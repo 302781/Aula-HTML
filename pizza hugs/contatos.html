@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos - Pizza hugs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
     <h1>PIZZARIA HUGS</h1>
-    <nav>
+    <p class="slogan">Onde cada fatia é um abraço.</p>
+    <nav class="nav">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="contatos.html">Contato</a></li>
@@ -17,22 +19,26 @@
         </ul>
     </nav>
 </header>
-<form action="" method="get" class="form-example">
-  <div class="form-example">
+
+<form>
+  <div class="campo">
     <label for="name">Escreva o seu nome: </label>
     <input type="text" name="name" id="name" required />
   </div>
-  <div class="form-example">
+  <div class="campo">
     <label for="email">Escreva o seu email: </label>
     <input type="email" name="email" id="email" required />
   </div>
-  <div class="form-example">
-    <input type="submit" value="Manda!" />
+  <div class="campo">
+   <button type="submit" class="submit-btn">Enviar Mensagem</button>
   </div>
 </form>
 
- <footer>
+<footer>
+        <p>Email: contato@pizzariahugs.com.br</p>
+        <p>Telefone: (11) 98765-4321</p>
         <p>&copy; 2025 pizzaria hugs. Todos os direitos reservados</p>
+        <a href="#top" class="back-to-top">Voltar ao Topo</a>
     </footer>
 </body>
 </html>
