@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Site de Exemplo</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+  <!-- Menu -->
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de Imagens -->
+  <section id="galeria" class="galeria">
+    <h2>Galeria de Imagens</h2>
+    <div class="grid-imagens">
+      <img src="img/diferencial-01.jpg" alt="Imagem 1">
+      <img src="img/diferencial-02.jpg" alt="Imagem 2">
+      <img src="img/equipe-01.jpg" alt="Imagem 3">
+      <img src="img/escritorio.jpg" alt="Imagem 4">
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section id="contato" class="form">
+    <h2>Entre em Contato</h2>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 - Site de Exemplo</p>
+  </footer>
 </body>
 </html>
