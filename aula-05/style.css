@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #191919;
+}
+
+/* --- Acessibilidade: Foco Visível (Roteiro 3) --- */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #890985;
+    outline-offset: 2px;
+}
+
+/* --- Menu --- */
+.menu ul {
+    display: flex;
+    justify-content: center;
+    background: #4f024d;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background: #890985;
+}
+
+/* --- Seções Comuns --- */
+.galeria,
+.formulario {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* --- Galeria --- */
+
+.grid-imagens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.grid-imagens img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- Formulário --- */
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 15px;
+    text-align: left; /* Alinha labels à esquerda */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    padding: 12px;
+    background: #4f024d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formulario button:hover {
+    background: #890985;
+}
+
+/* --- Rodapé --- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #f4f4f4;
+    margin-top: 20px;
+}
+
+/* --- ROTEIRO 2: MEDIA QUERIES --- */
+
+/* Breakpoint 1: Desktops menores e tablets (ex: 1024px) */
+@media (max-width: 1024px) {
+    /* 1. Ajuste: Galeria de 4 para 2 colunas */
+    .grid-imagens {
+        grid-template-columns: 1fr;
+    }
+
+    /* 2. Ajuste: Redução de padding das seções */
+    .galeria,
+    .formulario {
+        padding: 10px;
+    }
+
+    /* 3. Ajuste: Redução de margem no menu */
+    .menu ul li {
+        margin: 10px;
+    }
+}
+
+/* Breakpoint 2: Tablets e Celulares (ex: 768px) */
+@media (max-width: 768px) {
+    /* 1. Ajuste: Menu horizontal para vertical */
+    .menu ul {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .menu ul li {
+        margin: 5%; /* Remove margens laterais */
+    }
+    .menu ul li a {
+        padding: 12px;
+    }
+
+    /* 2. Ajuste: Galeria para 2 colunas */
+    .grid-imagens {
+        grid-template-columns: repeat(200px 200px); /* Alterado para 2 colunas */
+    }
+
+    /* 3. Ajuste: Redução de fontes e espaçamentos */
+    h2 {
+        font-size: 1fr;
+    }
+    .galeria,
+    .formulario {
+        padding: 20px 15px;
+    }
+}
