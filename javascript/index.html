@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando o Javascript</title>
+</head>
+<body>
+    <h1 id="titulo">Clique no Botao</h1>
+    <button id="botao">Clique aqui!</button>
+
+    <p id="mensagem">Passe o mouse aqui...</p>
+    <input id="campo" placeholder="Digite seu nome...">
+    <p id="saudacao"></p>
+
+    <script>
+        const titulo = document.querySelector("#titulo");
+        const botao = document.querySelector("#botao");
+        const mensagem = document.querySelector("#mensagem");
+        const campo = document.querySelector("#campo");
+        const saudacao = document.querySelector("#saudacao");
+        
+        botao.onclick = function(){
+            titulo.innerHTML = "Voce clicou no botao!";
+            titulo.style.color = "blue";
+            titulo.body.style.backgroundColor = "#e0f7fa";
+        }
+
+        mensagem.onmouserover = function(){
+            mensagem.innerHTML = "Maravilha!!";
+            mensagem.style.color = "green";
+        }
+
+        mensagem.onmouseout = function(){
+            mensagem.innerHTML ="Passe o mouse aqui...";
+            mensagem.style.color = "#d55d63";
+        }
+        
+        campo.oninput = function(){
+            saudacao.innerHTML ="Ola, " + campo.value + "!😽";
+        }
+    </script>
+</body>
+</html>
